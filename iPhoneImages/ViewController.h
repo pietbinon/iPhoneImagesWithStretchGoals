@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface ViewController : UIViewController
 
+- (NSURL *) returnURL: (NSString *) string;
 
 @end
 
