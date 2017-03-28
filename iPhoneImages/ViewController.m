@@ -36,10 +36,17 @@
     
     self.iPhoneImages = @[ @"http://imgur.com/y9MIaCS.png", @"http://imgur.com/bktnImE.png", @"http://imgur.com/zdwdenZ.png", @"http://imgur.com/CoQ8aNl.png", @"http://imgur.com/2vQtZBb.png"];
     
-    //The following line replaced with the content of the button method
+    //The following line us replaced with the content of the button method (line 47)
     //NSURL *url = [NSURL URLWithString: @"http://imgur.com/y9MIaCS.png"]; //1
-    
+}
 
+
+- (IBAction)randomiPhoneButton:(UIButton *)sender {
+    
+    int random = arc4random_uniform(self.iPhoneImages.count);
+    NSURL *url = [NSURL URLWithString: self.iPhoneImages[random]];
+    NSLog(@"imgur url = %@", url);
+    
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration]; //2
     NSURLSession *session = [NSURLSession sessionWithConfiguration: configuration]; //3
@@ -49,7 +56,7 @@
     //location: The location of a file we just downloaded on the device.
     //response: Response metadata such as HTTP headers and status codes.
     //error: An NSError that indicates why the request failed, or nil when the request is successful.
-    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL: [self returnURL:<#(NSString *)#>] completionHandler: ^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL: url completionHandler: ^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         if (error) { //6
             
@@ -69,37 +76,7 @@
     }]; //4
     
     [downloadTask resume]; //5
-    
-    
 }
-
-- (IBAction)randomiPhoneButton:(UIButton *)sender {
-    
-    int random = arc4random_uniform(self.iPhoneImages.count);
-    NSString *tempString = self.iPhoneImages[random];
-    NSLog(@"imgur url = %@", tempString);
-    [self returnURL: tempString];
-}
-
-
-- (NSURL *) returnURL: (NSString *) string {
-    
-    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"%@", string]];
-    return url;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 - (void)didReceiveMemoryWarning {

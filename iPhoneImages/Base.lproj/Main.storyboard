@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,10 +25,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jYY-lr-6Lg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAL-zr-Ulu">
-                                <rect key="frame" x="313" y="28" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAL-zr-Ulu">
+                                <rect key="frame" x="137" y="20" width="222" height="30"/>
+                                <state key="normal" title="Press to Display an iPhone Color"/>
                                 <connections>
                                     <action selector="randomiPhoneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JWt-Tr-Ymg"/>
                                 </connections>
@@ -39,6 +39,8 @@
                             <constraint firstItem="jYY-lr-6Lg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="B5c-X1-KUg"/>
                             <constraint firstItem="jYY-lr-6Lg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QTV-OO-ZUT"/>
                             <constraint firstAttribute="trailing" secondItem="jYY-lr-6Lg" secondAttribute="trailing" id="dPp-uG-OWp"/>
+                            <constraint firstItem="RAL-zr-Ulu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ghB-zd-ASF"/>
+                            <constraint firstItem="RAL-zr-Ulu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sPK-if-z1z"/>
                         </constraints>
                     </view>
                     <connections>

@@ -63,9 +63,6 @@
 				7751ABB21E89AE7D0032189A /* ViewController.h */,
 				7751ABB31E89AE7D0032189A /* ViewController.m */,
 				7751ABB51E89AE7D0032189A /* Main.storyboard */,
-				7751ABB81E89AE7D0032189A /* Assets.xcassets */,
-				7751ABBA1E89AE7D0032189A /* LaunchScreen.storyboard */,
-				7751ABBD1E89AE7D0032189A /* Info.plist */,
 				7751ABAC1E89AE7D0032189A /* Supporting Files */,
 			);
 			path = iPhoneImages;
@@ -74,6 +71,9 @@
 		7751ABAC1E89AE7D0032189A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7751ABB81E89AE7D0032189A /* Assets.xcassets */,
+				7751ABBA1E89AE7D0032189A /* LaunchScreen.storyboard */,
+				7751ABBD1E89AE7D0032189A /* Info.plist */,
 				7751ABAD1E89AE7D0032189A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -307,6 +307,7 @@
 				7751ABC21E89AE7D0032189A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
